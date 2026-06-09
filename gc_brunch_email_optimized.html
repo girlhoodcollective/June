@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Better Together – Girlhood Collective Brunch 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f0ede8;
+    font-family: 'DM Sans', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #243d4d;
+    margin: 0;
+    padding: 0;
+  }
+
+  .email-wrapper {
+    max-width: 620px;
+    margin: 0 auto;
+    background: #ffffff;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #355B74;
+    padding: 40px 36px 32px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #4db890;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .header-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 46px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.0;
+    margin-bottom: 4px;
+  }
+
+  .header-script {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 38px;
+    color: #c4baee;
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .header-tagline {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    max-width: 380px;
+  }
+
+  /* ── META ROW (stacks on mobile) ── */
+  .meta-table {
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    padding-top: 18px;
+  }
+
+  .meta-cell {
+    display: inline-block;
+    padding-right: 18px;
+    margin-right: 18px;
+    border-right: 1px solid rgba(255,255,255,0.14);
+    vertical-align: top;
+    margin-bottom: 10px;
+  }
+
+  .meta-cell:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .meta-label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .meta-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.35;
+  }
+
+  /* ── BENEFICIARY STRIPE ── */
+  .beneficiary {
+    background: #eef6f3;
+    border-left: 4px solid #097056;
+    padding: 20px 28px;
+  }
+
+  .beneficiary .eyebrow {
+    color: #097056;
+    margin-bottom: 6px;
+  }
+
+  .beneficiary-text {
+    font-size: 13.5px;
+    color: #355B74;
+    line-height: 1.75;
+  }
+
+  .beneficiary-text strong {
+    font-weight: 600;
+    color: #243d4d;
+  }
+
+  /* ── BODY SECTIONS ── */
+  .section {
+    padding: 36px 36px;
+    border-bottom: 1px solid #e8e2da;
+  }
+
+  .section-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #355B74;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .body-text {
+    font-size: 15px;
+    color: #3a5264;
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .body-text:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* ── BUTTONS ── */
+  .btn-group {
+    margin-top: 24px;
+    display: block;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn-primary {
+    background: #097056;
+    color: #ffffff !important;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #097056 !important;
+    border: 1.5px solid #097056;
+  }
+
+  /* ── SPONSORSHIP TIERS ── */
+  .tier {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e2da;
+  }
+
+  .tier:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .tier:first-of-type {
+    padding-top: 0;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+
+  .badge-presenting { background: #355B74; color: #ffffff; }
+  .badge-legacy     { background: #097056; color: #ffffff; }
+  .badge-community  { background: #9D86D6; color: #ffffff; }
+  .badge-neighbor   { background: #FFE1EF; color: #355B74; }
+
+  .tier-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .tier-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #355B74;
+  }
+
+  .tier-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #097056;
+    letter-spacing: -0.02em;
+  }
+
+  .tier-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tier-benefits li {
+    font-size: 13.5px;
+    color: #4a6d82;
+    line-height: 1.65;
+    padding: 3px 0 3px 16px;
+    position: relative;
+  }
+
+  .tier-benefits li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #097056;
+    font-size: 11px;
+    top: 4px;
+  }
+
+  /* ── IMPACT SECTION ── */
+  .impact {
+    background: #355B74;
+    padding: 36px 36px;
+  }
+
+  .impact .section-heading {
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .impact-item {
+    background: rgba(255,255,255,0.07);
+    padding: 16px 18px;
+    border-top: 2px solid rgba(196,186,238,0.45);
+  }
+
+  .impact-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c4baee;
+    margin-bottom: 8px;
+  }
+
+  .impact-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.65;
+  }
+
+  /* ── TRANSPARENCY ── */
+  .transparency {
+    padding: 20px 36px;
+    background: #faf8f5;
+    border-top: 1px solid #e8e2da;
+  }
+
+  .transparency p {
+    font-size: 12px;
+    color: #7a8f9d;
+    line-height: 1.8;
+  }
+
+  .transparency strong {
+    color: #4a6d82;
+    font-weight: 600;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #243d4d;
+    padding: 32px 36px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+
+  .footer-brand-detail {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .footer-brand-detail a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+  }
+
+  .footer-cta-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+
+  .footer .btn-primary {
+    background: #FFE1EF;
+    color: #243d4d !important;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .footer .btn-secondary {
+    color: rgba(255,255,255,0.72) !important;
+    border-color: rgba(255,255,255,0.28);
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .footer-email {
+    font-style: italic;
+    font-size: 13px;
+    color: #c4baee;
+    display: block;
+    margin-top: 12px;
+    text-decoration: none;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 480px) {
+    .header { padding: 28px 20px 24px; }
+    .header-title { font-size: 36px; }
+    .header-script { font-size: 30px; }
+    .header-tagline { font-size: 13px; }
+
+    .meta-cell {
+      display: block;
+      border-right: none;
+      margin-right: 0;
+      padding-right: 0;
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .meta-cell:last-child { border-bottom: none; }
+
+    .beneficiary { padding: 18px 20px; }
+
+    .section { padding: 28px 20px; }
+    .section-heading { font-size: 22px; }
+
+    .impact { padding: 28px 20px; }
+    .impact-grid { grid-template-columns: 1fr; gap: 12px; }
+
+    .transparency { padding: 18px 20px; }
+
+    .footer { padding: 28px 20px; }
+
+    .btn {
+      display: block;
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <span class="eyebrow">Girlhood Collective · Cincinnati</span>
+    <h1 class="header-title">Better</h1>
+    <span class="header-script">Together.</span>
+    <p class="header-tagline">An interactive brunch celebrating community, connection, and Cincinnati's next generation of leaders. Genuine connection. Expert panelists. Tangible impact.</p>
+    <div class="meta-table">
+      <div class="meta-cell">
+        <span class="meta-label">Date</span>
+        <span class="meta-value">July 18, 2026</span>
+      </div>
+      <div class="meta-cell">
+        <span class="meta-label">Time</span>
+        <span class="meta-value">10:00 AM – 1:00 PM</span>
+      </div>
+      <div class="meta-cell">
+        <span class="meta-label">Venue</span>
+        <span class="meta-value">3500 Columbia Pkwy<br>Cincinnati, OH</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BENEFICIARY STRIPE -->
+  <div class="beneficiary">
+    <span class="eyebrow">🎓 &nbsp;2026 Nonprofit Beneficiary</span>
+    <p class="beneficiary-text">A portion of every sponsorship and ticket sale supports <strong>Endurance in Education (EIE)</strong>, a Cincinnati mentorship organization building long-term, cross-industry connections for high school students, college students, and early career professionals.</p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <span class="eyebrow">About the Event</span>
+    <h2 class="section-heading">Community in Action</h2>
+    <p class="body-text">Join us for a morning of connection, good vibes, valuable lessons, and the knowledge that your presence directly funded the next generation of this city's leaders.</p>
+    <p class="body-text">Seated brunch. Panel conversation with local experts. Saturday, July 18 · 10:00 AM – 1:00 PM · 3500 Columbia Pkwy, Cincinnati.</p>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="https://luma.com/gmv05vhh">Purchase Your Ticket</a>
+      <a class="btn btn-secondary" href="https://tally.so/r/QK4yZA?utm_source=luma">Become a Sponsor</a>
+    </div>
+  </div>
+
+  <!-- SPONSORSHIP TIERS -->
+  <div class="section">
+    <span class="eyebrow">Sponsorship Opportunities</span>
+    <h2 class="section-heading">Make twice the impact.</h2>
+    <p class="body-text" style="margin-bottom: 28px;">Every sponsorship tier supports our events, programs, <em>and</em> sends a direct contribution to EIE's mentorship work with Cincinnati students.</p>
+
+    <div class="tier">
+      <span class="tier-badge badge-presenting">Presenting</span>
+      <div class="tier-header">
+        <span class="tier-name">Presenting Sponsor</span>
+        <span class="tier-price">$2,000</span>
+      </div>
+      <ul class="tier-benefits">
+        <li>Primary presence on all event materials, signage, and backdrop</li>
+        <li>Featured social media co-promotion before and after the event</li>
+        <li>Reserved branded table with guest seats</li>
+        <li>Verbal recognition throughout the event program</li>
+        <li>Feature in <em>A Voice That Carries</em> newsletter (52–66% open rate)</li>
+        <li>First right of refusal for 2027 Presenting Sponsorship</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <span class="tier-badge badge-legacy">Legacy</span>
+      <div class="tier-header">
+        <span class="tier-name">Legacy Sponsor</span>
+        <span class="tier-price">$1,000</span>
+      </div>
+      <ul class="tier-benefits">
+        <li>Premier logo placement on event signage and materials</li>
+        <li>Dedicated social media feature</li>
+        <li>2 reserved seats at the event</li>
+        <li>Option to include a branded experience for guests</li>
+        <li>Listed as a Legacy partner on girlhoodcincy.com</li>
+        <li>Newsletter mention</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <span class="tier-badge badge-community">Community</span>
+      <div class="tier-header">
+        <span class="tier-name">Community Sponsor</span>
+        <span class="tier-price">$500</span>
+      </div>
+      <ul class="tier-benefits">
+        <li>Logo on event signage and materials</li>
+        <li>Social media mentions as a community sponsor</li>
+        <li>1 reserved seat at the event</li>
+        <li>Listed as a Community partner on girlhoodcincy.com</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <span class="tier-badge badge-neighbor">Neighbor</span>
+      <div class="tier-header">
+        <span class="tier-name">Neighbor Sponsor</span>
+        <span class="tier-price">$250</span>
+      </div>
+      <ul class="tier-benefits">
+        <li>Name recognition on event signage</li>
+        <li>Social media acknowledgment as a community supporter</li>
+        <li>Recognition in event program</li>
+        <li>Listed on girlhoodcincy.com as a Neighbor partner</li>
+      </ul>
+    </div>
+
+    <div class="btn-group">
+      <a class="btn btn-primary" href="https://tally.so/r/QK4yZA?utm_source=luma">Apply to Sponsor</a>
+      <a class="btn btn-secondary" href="https://luma.com/gmv05vhh">Buy Event Tickets</a>
+    </div>
+  </div>
+
+  <!-- IMPACT -->
+  <div class="impact">
+    <h2 class="section-heading">What you're contributing to.</h2>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <p class="impact-title">Girlhood Programming</p>
+        <p class="impact-text">Enrichment events, experiences, and resources for women and girls across Cincinnati.</p>
+      </div>
+      <div class="impact-item">
+        <p class="impact-title">EIE Student Mentorship</p>
+        <p class="impact-text">Long-term P.O.D. mentorship for high school and college students — turning uncertainty into direction.</p>
+      </div>
+      <div class="impact-item">
+        <p class="impact-title">Cincinnati's Future Workforce</p>
+        <p class="impact-text">The students you help today become the confident, ready-to-hire professionals Cincinnati businesses need tomorrow.</p>
+      </div>
+      <div class="impact-item">
+        <p class="impact-title">Cross-Generation Connection</p>
+        <p class="impact-text">The Brunch brings women of all ages and industries into the same room — modeling exactly what EIE's communities are built to create.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSPARENCY -->
+  <div class="transparency">
+    <p><strong>A note on transparency:</strong> Girlhood Collective is a for-profit organization raising funds on behalf of a nonprofit partner. Sponsorship investments cover event production costs first; a dedicated portion of ticket sales and additional fundraising flows directly to Endurance in Education. Specific allocation details are available upon request. Questions? Reach us at hello@girlhoodcincy.com.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand-name">Girlhood Collective</div>
+    <div class="footer-brand-detail">
+      Cincinnati, OH<br>
+      <a href="http://girlhoodcincy.com">girlhoodcincy.com</a> &nbsp;·&nbsp; @girlhood_cincy
+    </div>
+    <p class="footer-cta-label">Ready to join the fun?</p>
+    <a class="btn btn-primary" href="https://luma.com/gmv05vhh">Purchase Your Tickets</a>
+    <a class="btn btn-secondary" href="https://tally.so/r/QK4yZA?utm_source=luma">Sponsor This Brunch</a>
+    <a class="footer-email" href="mailto:hello@girlhoodcincy.com">hello@girlhoodcincy.com</a>
+    <br><br>
+    <a href="{$unsubscribe}" style="font-size:11px; color:rgba(255,255,255,0.3); text-decoration:none;">Unsubscribe</a>
+  </div>
+
+</div>
+</body>
+</html>
